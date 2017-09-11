@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Bootstrap 101 Template</title>
+</head>
+<body>
+<br/><br/>
+<h1>Spring Boot file upload example</h1>
+<form method="post" action="/add" th:object="${actor}"
+      enctype="multipart/form-data">
+    Name: <input type="text" th:field="*{name}"/>
+    Real Name: <input type="text" th:field="*{realname}"/>
+    <input type="file" name="file"/> <br/><br/>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
